@@ -58,17 +58,26 @@ def run():
 
     
     elif option == 2:
-        modal2 = """
-        Enter the encrypt message:
         
-        """
-        msg_to_decrypt = input(modal2)
-        msg_decrypt = decryptmsg(msg_to_decrypt)
-        print('\n')
-        print('#-----Decrypted message-----#')
-        print(msg_decrypt)
-        print('#---------------------------#')
-        print('\n')
+
+        try:
+            modal2 = """
+            Enter the encrypt message:
+            
+            """
+            msg_to_decrypt = input(modal2)
+            msg_decrypt = decryptmsg(msg_to_decrypt)
+            print('\n')
+            print('#-----Decrypted message-----#')
+            print(msg_decrypt)
+            print('#---------------------------#')
+            print('\n')
+        except:
+            print('\n')
+            print('Decryption failed!!')
+            print('Try again...')
+            print('\n')
+
     else:
         print("Ingresa una opción correcta")
 
